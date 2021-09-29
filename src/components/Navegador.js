@@ -1,7 +1,8 @@
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 const Navegador = () => {
     return (
-        <div>
+        <React.Fragment>
              <div><h2 className="text-center" color="white">WINNING TEAM</h2></div>
             <Nav defaultActiveKey="/home" className="flex-column">
               <Nav.Link color="white" eventKey="link-1">Inicio</Nav.Link>
@@ -10,7 +11,7 @@ const Navegador = () => {
               <Nav.Link href="/home">Usuarios</Nav.Link>
               <Nav.Link eventKey="link-2">Cerrar Sesión</Nav.Link>
             </Nav>
-        </div>
+        </React.Fragment>
     )
 }
 
