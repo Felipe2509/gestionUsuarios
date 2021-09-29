@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Form from 'react-bootstrap/Form'
 import Buttons from './Buttons'
 
 const ListarUsuarios = () => {
@@ -30,7 +31,11 @@ const ListarUsuarios = () => {
                 <tr>
                   <td>3</td>
                   <td colSpan="2">Larry the Bird</td>
-                  <td><Buttons /></td>
+                  <td>
+                    <Form.Select size="sm">
+                    <option>Small select</option>
+                    </Form.Select>
+                    </td>
                 </tr>
               </tbody>
             </Table>
