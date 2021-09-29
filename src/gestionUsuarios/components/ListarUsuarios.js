@@ -1,20 +1,17 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
 import Buttons from './Buttons'
 
 const ListarUsuarios = () => {
     return (
       <React.Fragment>
-            <div><h2>Listado de Usuarios</h2></div>
-            <Button variant="success">Agregar</Button>{' '}
             <Table fluid>
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Acciones</th>
+                  <th>Usuario</th>
+                  <th>Fecha</th>
+                  <th>Estado</th>
                 </tr>
               </thead>
               <tbody>

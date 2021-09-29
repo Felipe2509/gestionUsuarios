@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import Navegador from './Navegador'
 import ListarUsuarios from './ListarUsuarios'
 
@@ -12,6 +13,9 @@ const Contenedor = () => {
                     <Navegador/>
                 </Col>
                 <Col>
+                
+                    <div><h2>Listado de Usuarios</h2></div>
+                    <Button variant="success">Agregar</Button>{' '}
                     <ListarUsuarios/>
                 </Col>
             </Container>
