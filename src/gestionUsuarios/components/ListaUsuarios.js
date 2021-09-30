@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import Form from 'react-bootstrap/Form'
-import Buttons from './Buttons'
+import FormSelectEstado from './FormSelectEstado'
+import FormSelectRol from './FormSelectRol'
 
 const ListarUsuarios = () => {
     return (
@@ -11,7 +11,7 @@ const ListarUsuarios = () => {
                 <tr>
                   <th>#</th>
                   <th>Usuario</th>
-                  <th>Fecha</th>
+                  <th>Rol</th>
                   <th>Estado</th>
                 </tr>
               </thead>
@@ -19,23 +19,20 @@ const ListarUsuarios = () => {
                 <tr>
                   <td>1</td>
                   <td>Mark</td>
-                  <td>Otto</td>
-                  <td><Buttons /></td>
+                  <td><FormSelectRol /></td>
+                  <td><FormSelectEstado /></td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td><Buttons /></td>
+                  <td><FormSelectRol /></td>
+                  <td><FormSelectEstado /></td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td colSpan="2">Larry the Bird</td>
-                  <td>
-                    <Form.Select size="sm">
-                    <option>Small select</option>
-                    </Form.Select>
-                    </td>
+                  <td>Larry the Bird</td>
+                  <td><FormSelectRol /></td>
+                  <td><FormSelectEstado /></td>
                 </tr>
               </tbody>
             </Table>
