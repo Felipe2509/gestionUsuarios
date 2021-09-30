@@ -1,12 +1,22 @@
 import Form from 'react-bootstrap/Form'
 
-const FormSelectEstado = () => {
-    return (
-        <Form.Select size="sm" className="form-width">
-            <option>Administrador</option>
-            <option>Vendedor</option>
-        </Form.Select>
-    )
+const FormSelectRol = ({opc}) => {
+    if (opc){
+        return (
+            <Form.Select disabled="true" size="sm">
+                <option>Administrador</option>
+                <option>Vendedor</option>
+            </Form.Select>
+        )
+    }else{
+        return (
+            <Form.Select size="sm">
+                <option>Administrador</option>
+                <option>Vendedor</option>
+            </Form.Select>
+        )
+    }
+    
 }
 
-export default FormSelectEstado;
+export default FormSelectRol;

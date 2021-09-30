@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ListaUsuarios from '../components/ListaUsuarios'
 import Buttons from '../components/Buttons'
 
 const Usuarios = () => {
+    const [visible, setVisible] = useState(true);
+
 
     return(
-        <div>
+        <React.Fragment>
             <h2 className="mt-5">Listar Usuarios</h2>
-            <ListaUsuarios />
-            <Buttons/>
-        </div>
+            <ListaUsuarios 
+                opcion={visible}
+                />
+            <Buttons 
+                opcion={visible} 
+                setOpcion={setVisible}
+                />
+        </React.Fragment>
     );
 }
 

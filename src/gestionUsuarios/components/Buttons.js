@@ -1,26 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-const Buttons = () => {
+const Buttons = ({opcion, setOpcion}) => {
   
-    const [opc, setOpc] = useState(1);
+    const update = () => {
+        setOpcion(false);
+      };
+    
+      const accept = () => {
+        setOpcion(true);
+      };
 
-    const handleClick = (event) => {
-        if (opc === 1) {
-            setOpc(-1);
-        }else{
-            setOpc(1);
-        }
-    }
-
-    if(opc === 1){
+    if(opcion) {
         return (
-            <Button onClick={handleClick} variant="success" className="float-end">Actualizar</Button>
+            <Button onClick={update} variant="success" className="float-end">Actualizar</Button>
         )
     }else{
         return (
             <React.Fragment>
-                <Button onClick={handleClick} variant="success" className="float-end">Aceptar</Button>
-                <Button onClick={handleClick} variant="secondary" className="float-end">Cancelar</Button>
+                <Button onClick={accept} variant="success" className="float-end">Aceptar</Button>
+                <Button onClick={accept} variant="secondary" className="float-end me-3">Cancelar</Button>
             </React.Fragment>
         )
     }
